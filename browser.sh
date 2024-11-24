@@ -31,8 +31,8 @@ install_chromium() {
             -e CUSTOM_USER=$USERNAME \
             -e PASSWORD=$PASSWORD \
             -e CHROME_CLI=https://www.youtube.com/@IR_TECH/ `#optional` \
-            -p 3030:4000 \
-            -p 3031:4001 \
+            -p 3010:3000 \
+            -p 3011:1001 \
             -v /root/chromium/config:/config \
             --shm-size="1gb" \
             --restart unless-stopped \
@@ -74,8 +74,8 @@ install_firefox() {
             -e TZ=Etc/UTC \
             -e CUSTOM_USER=$USERNAME \
             -e PASSWORD=$PASSWORD \
-            -p 4040:4000 \
-            -p 4041:4000 \
+            -p 4010:3000 \
+            -p 4011:3001 \
             -v /root/firefox/config:/config \
             --shm-size="1gb" \
             --restart unless-stopped \
